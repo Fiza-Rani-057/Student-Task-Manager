@@ -9,7 +9,8 @@
 }
 
 .stat-card {
-   background-color: rgb(15, 4, 4);
+   /* background-color: rgb(15, 4, 4); */
+   background-color: rgb(17, 10, 10);
   border: 1px solid #1e293b;
   border-radius: 12px;
   padding: 18px;
