@@ -1,11 +1,15 @@
-import { Sidebar } from "./Components/Sidebar";
-import { Header } from "./Components/Header";
+import { Charts} from "./Components/Charts";
+
 
 function App() {
   return (
     <>
       {/* <Sidebar />
       <Header /> */}
+      {/* <Cards/> */}
+      {/* <Charts/> */}
+
+
 
     </>
   )
