@@ -27,7 +27,6 @@ function Tasks({ tasks, onDelete, onComplete }) {
                                         Complete
                                     </button>
                                 )}
-
                                 <button onClick={() => onDelete(task.id)}>
                                     Delete
                                 </button>
