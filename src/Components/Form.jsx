@@ -3,6 +3,7 @@ import { useState } from "react";
 
 function Form({ onClose, onAddTask }) {
     const [task, setTask] = useState("");
+    const [assignto, setAssignto] = useState("")
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -31,6 +32,19 @@ function Form({ onClose, onAddTask }) {
                             id="taskTitle" placeholder="Enter a Task"
                             value={task} onChange={(e) => setTask(e.target.value)} />
                     </div>
+                    <div className="form-group">
+                        <label htmlFor="taskTitle">Assign To</label>
+                        <select type="text"
+                            id="taskTitle" placeholder="Enter a Task"
+                            value={assignto} onChange={(e) =>
+                                setAssignto(e.target.value)} />
+                        <option value="">Select User</option>
+                        {users.map((user)=>(
+                            <option  key = {user.id} value="user.name">
+                                {user.name}
+                            </option>
+                        ))}
+                    </div>
                     <div className="modal-actions">
                         <button
                             type="button"
@@ -47,4 +61,4 @@ function Form({ onClose, onAddTask }) {
         </div>
     )
 }
-export {Form}
+export { Form }
