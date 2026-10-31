@@ -1,4 +1,4 @@
-/* Main Dashboard Layout Container */
+
 
 * {
     box-sizing: border-box;
@@ -8,7 +8,7 @@
     display: flex;
     width: 100%;
     min-height: 100vh;
-    background-color: #050b18;
+    background-color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    background-color: #050b18;
+    background-color: black;
 }
 
 /* Tablet */
