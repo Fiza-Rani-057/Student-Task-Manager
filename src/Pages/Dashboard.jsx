@@ -1,7 +1,6 @@
 
 import "./Dashboard.css";
 import { useState, useEffect } from "react";
-
 import { Sidebar } from "../Components/Sidebar";
 import { Charts } from "../Components/Charts";
 import { Cards } from "../Components/Card";
