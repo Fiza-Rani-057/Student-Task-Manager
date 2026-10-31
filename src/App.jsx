@@ -1,10 +1,10 @@
 import { Sidebar } from "./Componenets/Sidebar";
 
 function App() {
-  // return (
+  return (
 
-  //   <Sidebar />
-  // )
+    <Sidebar />
+  )
 
 }
 export default App;
