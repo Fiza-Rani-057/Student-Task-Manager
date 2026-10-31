@@ -1,16 +1,28 @@
-# React + Vite
+## Project Explanation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a Student Task Manager Dashboard developed using React.js, HTML, CSS, and JavaScript.
 
-Currently, two official plugins are available:
+The dashboard is divided into reusable components, including Sidebar, Header, Cards, Charts, Task Form, Tasks Table, and Users Section.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Technologies & Concepts Used
 
-## React Compiler
+- **React.js:** Used to build the user interface with reusable components.
+- **useState:** Used to manage tasks, users, form inputs, and modal visibility.
+- **useEffect:** Used to fetch user data when the dashboard loads.
+- **Props:** Used to pass data and functions between components.
+- **Event Handling:** Used to handle form submissions, task completion, deletion, and modal actions.
+- **Conditional Rendering:** Used to display the task form when needed and show the Complete button only for pending tasks.
+- **Array Methods:** Used `map()` to display tasks and users, and `filter()` to delete tasks.
+- **Fetch API & Async/Await:** Used to retrieve user data from JSONPlaceholder API.
+- **CSS:** Used to style the dashboard and make its layout responsive.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### How It Works
 
-## Expanding the ESLint configuration
+1. The dashboard displays task information and user data.
+2. Users can open the Add Task form and enter a task title.
+3. Users can select a student from the API-fetched dropdown list.
+4. New tasks are added to the tasks table with a Pending status.
+5. Tasks can be marked as Completed or deleted.
+6. Student information is displayed separately in the Users section.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This assignment helped me practice React fundamentals, component-based development, state management, props, and API integration.
