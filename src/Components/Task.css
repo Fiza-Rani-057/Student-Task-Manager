@@ -1,0 +1,55 @@
+.task-table-card {
+  background-color: rgb(14, 8, 8);
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 30px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.task-table-card h3 {
+  margin: 0 0 16px 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.task-table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.task-table-card thead tr {
+  border-bottom: 1px solid #1e293b;
+}
+
+.task-table-card th {
+  padding: 12px 16px;
+  color: #eff2f6;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.task-table-card tbody tr {
+  border-bottom: 1px solid #1e293b;
+  transition: background-color 0.2s ease;
+}
+
+.task-table-card tbody tr:last-child {
+  border-bottom: none;
+}
+
+.task-table-card tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.task-table-card td {
+  padding: 14px 16px;
+  color: #e2e8f0;
+  font-size: 14px;
+  vertical-align: middle;
+}

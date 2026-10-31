@@ -4,6 +4,7 @@ import { Sidebar } from "../Components/Sidebar"
 import { Charts } from "../Components/Charts"
 import { Cards } from "../Components/Card"
 import { Header } from "../Components/Header"
+import { Tasks } from "../Components/Task"
 
 import { Form } from "../Components/Form"
 
@@ -25,6 +26,7 @@ function Dashboard() {
                     />
                 )
                 }
+                <Tasks/>
             </div>
         </div>
     )
