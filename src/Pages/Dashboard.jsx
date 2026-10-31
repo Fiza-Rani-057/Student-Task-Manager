@@ -19,7 +19,7 @@ function Dashboard() {
                 <Charts />
                 {showForm && (
                     <Form
-                        onClose={() => showForm(false)}
+                        onClose={() => setShowForm(false)}
                         onAddTask={(task) => console.log(task)}
                         users={[]}
                     />
