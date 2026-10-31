@@ -5,12 +5,15 @@ import { Charts } from "../Components/Charts"
 import { Cards } from "../Components/Card"
 import { Header } from "../Components/Header"
 import { Tasks } from "../Components/Task"
-
 import { Form } from "../Components/Form"
 
 
 function Dashboard() {
     const [showForm, setShowForm] = useState(false);
+    const [tasks,setTasks] = useState([]);
+    const addTask = (newTask)=>{
+        setTasks([...tasks,{newTask, id:Date.now()}])
+    }
     return (
         <div className="dashboard">
             <Sidebar onOpenModal={() => setShowForm(true)} />
@@ -21,12 +24,12 @@ function Dashboard() {
                 {showForm && (
                     <Form
                         onClose={() => setShowForm(false)}
-                        onAddTask={(task) => console.log(task)}
+                        onAddTask={{addTask}}
                         users={[]}
                     />
                 )
                 }
-                <Tasks/>
+                <Tasks tasks = {tasks}/>
             </div>
         </div>
     )

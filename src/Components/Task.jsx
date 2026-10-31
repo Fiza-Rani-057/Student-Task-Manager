@@ -1,7 +1,7 @@
- import "./Task.css"
+import "./Task.css"
 
-  function Tasks(){
-    return(
+function Tasks({ tasks }) {
+    return (
         <div className="task-table-card">
             <h3>All Tasks</h3>
             <table>
@@ -13,10 +13,19 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    {tasks.map(() => (
+                        <tr key={tasks.id}>
+                            <td>{tasks.title}</td>
+                            <td>{tasks.assignedTo}</td>
+                            <td>{tasks.status}</td>
+                            <td>Actions</td>
+                        </tr>
+                    ))}
+                </tbody>
             </table>
 
         </div>
     )
-  }
-  export {Tasks}
+}
+export { Tasks }
