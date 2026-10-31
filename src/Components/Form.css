@@ -16,7 +16,7 @@
 
 /* Glassmorphic Dark Container */
 .modal-content {
-  background-color: #0c1527;
+  background-color: rgb(15, 9, 9);
   border: 1px solid #1e293b;
   border-radius: 12px;
   width: 90%;
@@ -70,8 +70,9 @@
   font-weight: 500;
 }
 
-/* Input field with Dashboard theme styling */
-.form-group input {
+/* Input and Select styling with Dashboard theme */
+.form-group input,
+.form-group select {
   width: 100%;
   background-color: #050b18;
   border: 1px solid #1e293b;
@@ -88,8 +89,13 @@
   color: #64748b;
 }
 
-/* Glowing Orange Focus Effect */
-.form-group input:focus {
+.form-group select {
+  cursor: pointer;
+}
+
+/* Glowing Orange Focus Effect for Input & Select */
+.form-group input:focus,
+.form-group select:focus {
   border-color: #ff6b00;
   box-shadow: 0 0 12px rgba(255, 107, 0, 0.4);
 }

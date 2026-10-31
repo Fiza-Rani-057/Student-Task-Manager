@@ -1,7 +1,7 @@
 import "./Form.css";
 import { useState } from "react";
 
-function Form({ onClose, onAddTask }) {
+function Form({ onClose, onAddTask, users }) {
     const [task, setTask] = useState("");
     const [assignto, setAssignto] = useState("")
     const handleSubmit = (e) => {
@@ -24,7 +24,7 @@ function Form({ onClose, onAddTask }) {
                 <div className="modal-header">
                     <h3>Add new Task</h3>
                     <button type="button"
-                        className="close-btn" onClick={onclose}>
+                        className="close-btn" onClick={onClose}>
                         <i className="fa-solid fa-xmark"></i>
                     </button>
                 </div>
@@ -38,16 +38,17 @@ function Form({ onClose, onAddTask }) {
                     </div>
                     <div className="form-group">
                         <label htmlFor="taskTitle">Assign To</label>
-                        <select type="text"
-                            id="taskTitle" placeholder="Enter a Task"
+                        <select
+                            id="assignTo" placeholder="Enter a Task"
                             value={assignto} onChange={(e) =>
-                                setAssignto(e.target.value)} />
+                                setAssignto(e.target.value)} >
                         <option value="">Select User</option>
                         {users.map((user) => (
-                            <option key={user.id} value="user.name">
+                            <option key={user.id} value={user.name}>
                                 {user.name}
-                            </option>
+                            </option>   
                         ))}
+                        </select>
                     </div>
                     <div className="modal-actions">
                         <button
