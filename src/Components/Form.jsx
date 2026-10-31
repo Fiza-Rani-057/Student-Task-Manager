@@ -11,12 +11,18 @@ function Form({ onClose, onAddTask, users }) {
             alert("Please Enter a Task");
             return;
         }
+        if (!assignto) {
+            alert("Please Select a User");
+            return;
+        }
         onAddTask({
             title: task,
             assignedTo: assignto,
             status: "Pending"
         })
         setTask("");
+        setAssignto("");
+        onClose();
     }
     return (
         <div className="modal-overlay">
@@ -37,17 +43,17 @@ function Form({ onClose, onAddTask, users }) {
                             value={task} onChange={(e) => setTask(e.target.value)} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="taskTitle">Assign To</label>
+                        <label htmlFor="assignToe">Assign To</label>
                         <select
                             id="assignTo" placeholder="Enter a Task"
                             value={assignto} onChange={(e) =>
                                 setAssignto(e.target.value)} >
-                        <option value="">Select User</option>
-                        {users.map((user) => (
-                            <option key={user.id} value={user.name}>
-                                {user.name}
-                            </option>   
-                        ))}
+                            <option value="">Select User</option>
+                            {users.map((user) => (
+                                <option key={user.id} value={user.name}>
+                                    {user.name}
+                                </option>
+                            ))}
                         </select>
                     </div>
                     <div className="modal-actions">

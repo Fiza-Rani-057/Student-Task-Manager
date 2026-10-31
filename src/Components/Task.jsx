@@ -14,11 +14,11 @@ function Tasks({ tasks }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {tasks.map(() => (
-                        <tr key={tasks.id}>
-                            <td>{tasks.title}</td>
-                            <td>{tasks.assignedTo}</td>
-                            <td>{tasks.status}</td>
+                    {tasks.map((task) => (
+                        <tr key={task.id}>
+                            <td>{task.title}</td>
+                            <td>{task.assignedTo}</td>
+                            <td>{task.status}</td>
                             <td>Actions</td>
                         </tr>
                     ))}
