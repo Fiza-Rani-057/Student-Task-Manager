@@ -1,11 +1,8 @@
-
 import "./Task.css";
-
 function Tasks({ tasks, onDelete, onComplete }) {
     return (
         <div className="task-table-card">
             <h3>All Tasks</h3>
-
             <table>
                 <thead>
                     <tr>
@@ -38,5 +35,4 @@ function Tasks({ tasks, onDelete, onComplete }) {
         </div>
     );
 }
-
 export { Tasks };
