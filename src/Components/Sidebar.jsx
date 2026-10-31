@@ -52,7 +52,7 @@ const Sidebar = () => {
             <div className="sidebar-action">
                 <button
                     className="add-task-btn"
-                // onClick={onOpenModal}
+                // onClick={Form}
                 >
                     <span> ADD TASK</span>
                     <span>+</span>
