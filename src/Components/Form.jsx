@@ -11,7 +11,11 @@ function Form({ onClose, onAddTask }) {
             alert("Please Enter a Task");
             return;
         }
-        onAddTask(task);
+        onAddTask({
+            title: task,
+            assignedTo: assignto,
+            status: "Pending"
+        })
         setTask("");
     }
     return (
@@ -39,8 +43,8 @@ function Form({ onClose, onAddTask }) {
                             value={assignto} onChange={(e) =>
                                 setAssignto(e.target.value)} />
                         <option value="">Select User</option>
-                        {users.map((user)=>(
-                            <option  key = {user.id} value="user.name">
+                        {users.map((user) => (
+                            <option key={user.id} value="user.name">
                                 {user.name}
                             </option>
                         ))}
