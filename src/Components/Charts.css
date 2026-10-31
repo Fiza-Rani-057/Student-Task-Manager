@@ -32,7 +32,7 @@
 }
 
 .chart-dropdown select {
-  background-color: #050b18;
+  background-color: rgb(13, 7, 7);
   color: #94a3b8;
   border: 1px solid #1e293b;
   border-radius: 6px;
@@ -55,7 +55,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  color: #64748b;
+  color: #e2e5ea;
   font-size: 11px;
   padding-bottom: 20px;
 }
