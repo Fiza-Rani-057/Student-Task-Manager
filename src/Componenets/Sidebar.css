@@ -1,0 +1,197 @@
+.sidebar {
+  width: 260px;
+  background-color: #050b18;
+  border-right: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo Styling */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #ff6b00, #ff8800);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.logo-text h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 16px;
+}
+
+.logo-text span {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* Search Box */
+.sidebar-search {
+  position: relative;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.sidebar-search input {
+  width: 100%;
+  background-color: #0c1527;
+  border: 1px solid #1e293b;
+  padding: 9px 12px 9px 34px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 13px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.sidebar-search input::placeholder {
+  color: #64748b;
+}
+
+/* Menu Categories */
+.menu-category {
+  font-size: 10px;
+  color: #64748b;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  color: #94a3b8;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.menu-icon {
+  font-size: 16px;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+}
+
+.menu-item.active {
+  background: linear-gradient(135deg, #ff6b00, #e05e00);
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Add Task Button */
+.sidebar-action {
+  margin: 10px 0 20px 0;
+}
+
+.add-task-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #ff6b00, #e05e00);
+  color: #ffffff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.add-task-btn:hover {
+  opacity: 0.9;
+}
+
+/* User Profile Footer */
+.sidebar-profile {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #1e293b;
+}
+
+.profile-avatar {
+  width: 36px;
+  height: 36px;
+  background-color: #ff6b00;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.profile-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.profile-info h4 {
+  margin: 0;
+  font-size: 13px;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-info p {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-arrow {
+  color: #94a3b8;
+  font-size: 14px;
+}
