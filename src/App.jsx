@@ -1,9 +1,13 @@
 import { Sidebar } from "./Componenets/Sidebar";
+import { Header } from "./Componenets/Header";
 
 function App() {
   return (
+    <>
+      {/* <Sidebar /> */}
+      {/* <Header /> */}
 
-    <Sidebar />
+    </>
   )
 
 }
