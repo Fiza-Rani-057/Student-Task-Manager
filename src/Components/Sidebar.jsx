@@ -1,5 +1,5 @@
 import "./Sidebar.css"
-const Sidebar = () => {
+const Sidebar = ({onOpenModal}) => {
 
     return (
         <aside className="sidebar">
@@ -52,7 +52,7 @@ const Sidebar = () => {
             <div className="sidebar-action">
                 <button
                     className="add-task-btn"
-                // onClick={Form}
+                onClick={onOpenModal}
                 >
                     <span> ADD TASK</span>
                     <span>+</span>
