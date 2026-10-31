@@ -1,9 +1,10 @@
+import "./Dashboard.css"
 import { useState } from "react"
 import { Sidebar } from "../Components/Sidebar"
 import { Charts } from "../Components/Charts"
 import { Cards } from "../Components/Card"
 import { Header } from "../Components/Header"
-import "./Dashboard.css"
+
 import { Form } from "../Components/Form"
 
 
