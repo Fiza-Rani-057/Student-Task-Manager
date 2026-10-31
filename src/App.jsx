@@ -1,4 +1,5 @@
-import { Charts} from "./Components/Charts";
+// import { Charts} from "./Components/Charts";
+import { Form } from "./Components/Form";
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Header /> */}
       {/* <Cards/> */}
       {/* <Charts/> */}
+      {/* <Form/> */}
 
 
 
