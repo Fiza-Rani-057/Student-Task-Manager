@@ -1,9 +1,11 @@
-import "./Task.css"
 
-function Tasks({ tasks }) {
+import "./Task.css";
+
+function Tasks({ tasks, onDelete, onComplete }) {
     return (
         <div className="task-table-card">
             <h3>All Tasks</h3>
+
             <table>
                 <thead>
                     <tr>
@@ -19,13 +21,23 @@ function Tasks({ tasks }) {
                             <td>{task.title}</td>
                             <td>{task.assignedTo}</td>
                             <td>{task.status}</td>
-                            <td>Actions</td>
+                            <td>
+                                {task.status === "Pending" && (
+                                    <button onClick={() => onComplete(task.id)}>
+                                        Complete
+                                    </button>
+                                )}
+
+                                <button onClick={() => onDelete(task.id)}>
+                                    Delete
+                                </button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
-
         </div>
-    )
+    );
 }
-export { Tasks }
+
+export { Tasks };

@@ -53,3 +53,62 @@
   font-size: 14px;
   vertical-align: middle;
 }
+
+/* Action Buttons */
+.task-table-card td button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 8px;
+}
+
+/* Complete Button */
+.task-table-card td button:first-child {
+    background: #02211e;
+    color: #ccfbf1;
+}
+
+.task-table-card td button:first-child:hover {
+    background: #14b8a6;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Delete Button */
+.task-table-card td button:last-child {
+    background: #550e0e;
+    color: #fecaca;
+}
+
+.task-table-card td button:last-child:hover {
+    background: #dc2626;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Status Styling */
+.task-table-card td:nth-child(3) {
+    font-weight: 600;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .task-table-card {
+        margin: 20px 10px;
+        padding: 12px;
+        overflow-x: auto;
+    }
+
+    .task-table-card table {
+        min-width: 600px;
+    }
+
+    .task-table-card th,
+    .task-table-card td {
+        padding: 12px;
+    }
+}

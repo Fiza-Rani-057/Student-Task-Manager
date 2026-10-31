@@ -39,27 +39,37 @@ function Dashboard() {
     const addTask = (newTask) => {
         setTasks([...tasks, { ...newTask, id: Date.now() }]);
     };
+    const deleteTask = (id) => {
+        setTasks(tasks.filter((task) => task.id !== id))
+    }
+    const completeTask = (id) => {
+        setTasks(tasks.map((task) =>
+            task.id === id
+                ? { ...task, status: "Completed" }
+                : task
+        ))
+    }
+        return (
+            <div className="dashboard">
+                <Sidebar onOpenModal={() => setShowForm(true)} />
 
-    return (
-        <div className="dashboard">
-            <Sidebar onOpenModal={() => setShowForm(true)} />
+                <div className="main">
+                    <Header />
+                    <Cards />
+                    <Charts />
 
-            <div className="main">
-                <Header />
-                <Cards />
-                <Charts />
-
-                {showForm && (
-                    <Form
-                        onClose={() => setShowForm(false)}
-                        onAddTask={addTask}
-                        users={users}
-                    />
-                )}
-                <Tasks tasks={tasks} />
-                <Users users={users} />
+                    {showForm && (
+                        <Form
+                            onClose={() => setShowForm(false)}
+                            onAddTask={addTask}
+                            users={users}
+                        />
+                    )}
+                    <Tasks tasks={tasks} onDelete={deleteTask}
+                    onComplete = {completeTask} />
+                    <Users users={users} />
+                </div>
             </div>
-        </div>
-    );
-}
-export { Dashboard };
+        );
+    }
+    export { Dashboard }
